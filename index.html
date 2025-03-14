@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Terra-Geo | Learning GIS Development</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="Profile Picture" /></span>
+							<h1 id="title">Maria Fisher</h1>
+							<p>Geographic Software Developer</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Introduction</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+					<ul class="icons">
+						<li><a href="https://x.com/terra_geo_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/terra-geo" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+							<header>
+								<h2 class="alt">Hi! I'm <strong>Maria Fisher</strong>, an aspiring Geographic Software Developer</h2>
+								<p>Exploring the intersection of technology and geography, developing GIS applications, and creating interactive maps for spatial analysis.</p>
+							</header>
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+							<header>
+								<h2>Projects</h2>
+							</header>
+
+							<p>These are some of the GIS-based projects I have been working on:</p>
+
+							<div class="row">
+								<div class="col-6 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/map_project.jpg" alt="Interactive Map Project" /></a>
+										<header>
+											<h3>Interactive Mapping for Sustainable Agriculture and Food Security</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-6 col-12-mobile">
+									<canvas id="dataChart"></canvas>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+							<header>
+								<h2>About Me</h2>
+							</header>
+							<p>I am passionate about geographic information systems (GIS) and software development. My goal is to create user-friendly applications that help visualize and analyze spatial data. I am currently learning various GIS tools, including QGIS, ArcGIS, and Python for geospatial analysis.</p>
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>If you have questions about GIS development or want to collaborate, feel free to reach out!</p>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Your Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Your Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Your Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<ul class="copyright">
+					<li>&copy; 2025 Maria Fisher. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var ctx = document.getElementById('dataChart').getContext('2d');
+				var dataChart = new Chart(ctx, {
+					type: 'bar',
+					data: {
+						labels: ['Soil Quality', 'Water Availability', 'Crop Yield', 'GIS Usage'],
+						datasets: [{
+							label: 'Agriculture Data Analysis',
+							data: [85, 75, 90, 95],
+							backgroundColor: 'rgba(75, 192, 192, 0.5)'
+						}]
+					}
+				});
+			</script>
+	</body>
+</html>
